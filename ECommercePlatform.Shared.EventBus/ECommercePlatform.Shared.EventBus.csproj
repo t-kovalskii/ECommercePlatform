@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.1" />
+      <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.1" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+      <PackageReference Include="OpenTelemetry" Version="1.11.1" />
+      <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.11.1" />
+      <PackageReference Include="Polly" Version="8.5.1" />
+      <PackageReference Include="RabbitMQ.Client" Version="7.1.0-alpha.0" />
+      <PackageReference Include="System.Linq" Version="4.3.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ECommercePlatform.Shared.ServiceDefaults\ECommercePlatform.Shared.ServiceDefaults.csproj" />
+      <ProjectReference Include="..\ECommercePlatform.Shared.Utils\ECommercePlatform.Shared.Utils.csproj" />
+    </ItemGroup>
+
+</Project>

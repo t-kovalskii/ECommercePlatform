@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MediatR" Version="12.4.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ECommercePlatform.Services.User.Domain\ECommercePlatform.Services.User.Domain.csproj" />
+      <ProjectReference Include="..\ECommercePlatform.Shared.EventBus\ECommercePlatform.Shared.EventBus.csproj" />
+    </ItemGroup>
+
+</Project>
