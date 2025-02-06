@@ -20,6 +20,8 @@ public class CreateUserCommandHandler(
             request.PhoneNumber,
             request.Address);
         
+        logger.LogInformation("Creating user");
+        
         await userRepository.AddAsync(newUser);
         await userRepository.UnitOfWork.SaveEntitiesAsync(cancellationToken);
         

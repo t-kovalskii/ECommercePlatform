@@ -3,12 +3,13 @@ using ECommercePlatform.Services.User.Domain.Exceptions;
 using ECommercePlatform.Services.User.Domain.Models.Enums;
 
 using ECommercePlatform.Shared.Utils.DataAccess;
+using ECommercePlatform.Shared.Utils.Entity;
 
 namespace ECommercePlatform.Services.User.Domain.Models;
 
-public class User : Entity
+public class User : Aggregate
 {
-    public User(Guid merchantId, string firstName, string lastName, string email, string phoneNumber, string address)
+    public User(Guid merchantId, string firstName, string lastName, string email, string phoneNumber, Address address)
     {
         MerchantId = merchantId;
         FirstName = firstName;
@@ -30,7 +31,7 @@ public class User : Entity
     
     public string PhoneNumber { get; private set; }
     
-    public string Address { get; private set; }
+    public Address Address { get; private set; }
 
     public UserStatus Status { get; private set; } = UserStatus.Active;
 

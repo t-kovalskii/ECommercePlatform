@@ -1,3 +1,4 @@
+using ECommercePlatform.Services.User.Domain.Models;
 using MediatR;
 
 namespace ECommercePlatform.Services.User.Application.Commands;
@@ -14,5 +15,5 @@ public class CreateUserCommand : IRequest<bool>
     
     public required string PhoneNumber { get; init; }
     
-    public required string Address { get; init; }
+    public required Address Address { get; init; }
 }

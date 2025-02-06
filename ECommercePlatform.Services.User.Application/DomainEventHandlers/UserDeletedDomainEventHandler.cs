@@ -7,9 +7,9 @@ namespace ECommercePlatform.Services.User.Application.DomainEventHandlers;
 
 public class UserDeletedDomainEventHandler(ILogger logger) : DomainEventHandler<UserDeletedDomainEvent>
 {
-    public override Task Handle(UserDeletedDomainEvent notification, CancellationToken cancellationToken)
+    public override Task Handle(UserDeletedDomainEvent @event, CancellationToken cancellationToken)
     {
-        logger.LogInformation("User {UserId} deleted", notification.UserId);
+        logger.LogInformation("User {UserId} deleted", @event.UserId);
         return Task.CompletedTask;
     }
 }

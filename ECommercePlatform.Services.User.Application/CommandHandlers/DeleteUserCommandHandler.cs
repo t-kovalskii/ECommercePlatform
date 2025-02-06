@@ -14,7 +14,7 @@ public class DeleteUserCommandHandler(
         logger.LogInformation("Deleting user. User Id: {UserId}", request.Id);
         
         var user = await userRepository.GetByIdAsync(request.Id);
-        user.SetDeleted();
+        user?.SetDeleted();
 
         await userRepository.UnitOfWork.SaveEntitiesAsync(cancellationToken);
         

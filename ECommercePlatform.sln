@@ -56,6 +56,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommercePlatform.Services.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommercePlatform.Services.User.Application", "ECommercePlatform.Services.User.Application\ECommercePlatform.Services.User.Application.csproj", "{ED95FC85-577C-4E15-95AC-395E23D8B056}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommercePlatform.Services.User.Infrastructure", "ECommercePlatform.Services.User.Infrastructure\ECommercePlatform.Services.User.Infrastructure.csproj", "{D286BF41-4F18-4677-8717-4EAE5A63385A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommercePlatform.Services.User.Web", "ECommercePlatform.Services.User.Web\ECommercePlatform.Services.User.Web.csproj", "{FB526976-94F0-437A-8C8E-4D99E04C5791}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,6 +88,8 @@ Global
 		{35AE8D84-9AE3-4315-8AA8-324380AD3C41} = {30C7B7CF-9144-4AA9-8429-48FAD8931FA9}
 		{32597B9F-A07D-43B3-8FC5-ED2C46016117} = {3E876A29-2AE7-4EF4-93F8-798D510DB5A9}
 		{ED95FC85-577C-4E15-95AC-395E23D8B056} = {3E876A29-2AE7-4EF4-93F8-798D510DB5A9}
+		{D286BF41-4F18-4677-8717-4EAE5A63385A} = {3E876A29-2AE7-4EF4-93F8-798D510DB5A9}
+		{FB526976-94F0-437A-8C8E-4D99E04C5791} = {3E876A29-2AE7-4EF4-93F8-798D510DB5A9}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{4BCB50ED-1D02-4456-BC98-6EBC406A6E5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -114,5 +120,13 @@ Global
 		{ED95FC85-577C-4E15-95AC-395E23D8B056}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED95FC85-577C-4E15-95AC-395E23D8B056}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED95FC85-577C-4E15-95AC-395E23D8B056}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D286BF41-4F18-4677-8717-4EAE5A63385A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D286BF41-4F18-4677-8717-4EAE5A63385A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D286BF41-4F18-4677-8717-4EAE5A63385A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D286BF41-4F18-4677-8717-4EAE5A63385A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB526976-94F0-437A-8C8E-4D99E04C5791}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB526976-94F0-437A-8C8E-4D99E04C5791}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB526976-94F0-437A-8C8E-4D99E04C5791}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB526976-94F0-437A-8C8E-4D99E04C5791}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

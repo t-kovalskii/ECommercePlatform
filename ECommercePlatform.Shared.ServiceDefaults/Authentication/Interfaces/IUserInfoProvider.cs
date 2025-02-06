@@ -2,7 +2,7 @@ using System.Security.Claims;
 
 namespace ECommercePlatform.Shared.ServiceDefaults.Authentication.Interfaces;
 
-public interface IUserInfo
+public interface IUserInfoProvider
 {
     void SetPrincipal(ClaimsPrincipal principal);
     

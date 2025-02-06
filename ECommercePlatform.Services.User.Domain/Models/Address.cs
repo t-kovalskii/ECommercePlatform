@@ -1,4 +1,5 @@
 using ECommercePlatform.Shared.Utils.DataAccess;
+using ECommercePlatform.Shared.Utils.Entity;
 
 namespace ECommercePlatform.Services.User.Domain.Models;
 
@@ -8,8 +9,7 @@ public class Address(
     string city,
     string state,
     string zipCode,
-    string country,
-    bool isPrimary) : Entity
+    string country) : BaseEntity
 {
     public Guid UserId { get; } = userId;
     
@@ -22,6 +22,4 @@ public class Address(
     public string ZipCode { get; } = zipCode;
     
     public string Country { get; } = country;
-    
-    public bool IsPrimary { get; } = isPrimary;
 }

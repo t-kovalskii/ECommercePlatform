@@ -14,10 +14,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Interfaces\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\ECommercePlatform.Shared.ServiceDefaults\ECommercePlatform.Shared.ServiceDefaults.csproj" />
     </ItemGroup>
 

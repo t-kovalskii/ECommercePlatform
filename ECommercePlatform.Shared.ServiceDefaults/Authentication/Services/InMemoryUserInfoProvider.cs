@@ -4,7 +4,7 @@ using System.Security.Claims;
 
 namespace ECommercePlatform.Shared.ServiceDefaults.Authentication.Services;
 
-public class InMemoryUserInfo : IUserInfo
+public class InMemoryUserInfoProvider : IUserInfoProvider
 {
     public void SetPrincipal(ClaimsPrincipal principal)
     {

@@ -6,7 +6,7 @@ namespace ECommercePlatform.Shared.Utils.Behaviours;
 
 public class AuthorizationBehaviour<TRequest, TResponse>(
     ICredentialsProvider credentialsProvider,
-    IUserInfo userInfo,
+    IUserInfoProvider userInfoProvider,
     IAuthenticationValidator authenticationValidator) : IPipelineBehavior<TRequest, TResponse>
     where TRequest : notnull
 {
@@ -22,7 +22,7 @@ public class AuthorizationBehaviour<TRequest, TResponse>(
             throw new UnauthorizedAccessException();
         }
 
-        userInfo.SetPrincipal(principal);
+        userInfoProvider.SetPrincipal(principal);
         
         return await next();
     }
