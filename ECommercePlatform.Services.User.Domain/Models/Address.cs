@@ -4,14 +4,13 @@ using ECommercePlatform.Shared.Utils.Entity;
 namespace ECommercePlatform.Services.User.Domain.Models;
 
 public class Address(
-    Guid userId,
     string street,
     string city,
     string state,
     string zipCode,
     string country) : BaseEntity
 {
-    public Guid UserId { get; } = userId;
+    public Guid UserId { get; }
     
     public string Street { get; } = street;
     

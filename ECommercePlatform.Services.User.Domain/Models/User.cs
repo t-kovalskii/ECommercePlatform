@@ -2,7 +2,6 @@ using ECommercePlatform.Services.User.Domain.DomainEvents;
 using ECommercePlatform.Services.User.Domain.Exceptions;
 using ECommercePlatform.Services.User.Domain.Models.Enums;
 
-using ECommercePlatform.Shared.Utils.DataAccess;
 using ECommercePlatform.Shared.Utils.Entity;
 
 namespace ECommercePlatform.Services.User.Domain.Models;
@@ -20,6 +19,8 @@ public class User : Aggregate
         
         AddDomainEvent(new UserCreatedDomainEvent(this));
     }
+    
+    protected User() {}
     
     public Guid MerchantId { get; private set; }
     

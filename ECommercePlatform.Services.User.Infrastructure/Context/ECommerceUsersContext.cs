@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 
 namespace ECommercePlatform.Services.User.Infrastructure.Context;
 
-public partial class EcommerceUsersContext : DbContext
+public partial class ECommerceUsersContext : DbContext
 {
     private const string DefaultConnectionStringName = "DefaultConnection";
 
@@ -16,11 +16,11 @@ public partial class EcommerceUsersContext : DbContext
     private readonly IDomainEventDispatcher _domainEventDispatcher;
     private readonly ILogger _logger;
     
-    public EcommerceUsersContext()
+    public ECommerceUsersContext()
     {
     }
 
-    public EcommerceUsersContext(DbContextOptions<EcommerceUsersContext> options,
+    public ECommerceUsersContext(DbContextOptions<ECommerceUsersContext> options,
         IConfiguration configuration,
         IDomainEventDispatcher domainEventDispatcher,
         ILogger logger)

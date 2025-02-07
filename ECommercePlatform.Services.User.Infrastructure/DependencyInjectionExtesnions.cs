@@ -1,3 +1,4 @@
+using ECommercePlatform.Services.User.Infrastructure.Context;
 using ECommercePlatform.Services.User.Infrastructure.Mappings;
 using ECommercePlatform.Services.User.Infrastructure.Repositories;
 
@@ -15,6 +16,7 @@ public static class DependencyInjectionExtesnions
     public static IServiceCollection AddInfrastructureServices(this IServiceCollection services)
     {
         services.AddDefaultServiceAuthentication();
+        services.AddDbContext<ECommerceUsersContext>();
         services.AddMapper<UserServiceModelMapperFactory>();
         
         services.AddScoped<IRepository<Domain.Models.User>, UserRepository>();

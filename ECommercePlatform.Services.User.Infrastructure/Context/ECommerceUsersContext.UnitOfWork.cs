@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 
 namespace ECommercePlatform.Services.User.Infrastructure.Context;
 
-public partial class EcommerceUsersContext : IUnitOfWork
+public partial class ECommerceUsersContext : IUnitOfWork
 {
     public async Task<bool> SaveEntitiesAsync(CancellationToken cancellationToken = default)
     {
