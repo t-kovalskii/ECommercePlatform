@@ -15,7 +15,7 @@ public static class DependencyInjectionExtensions
         builder.Services.AddSingleton<IRabbitMqConnectionFactory, RabbitMqConnectionFactory>();
         builder.Services.AddSingleton<IRabbitMqConnectionKeeper, RabbitMqConnectionKeeper>();
 
-        // telemetry
+        // telemetry configuration
         builder.Services.AddSingleton<RabbitMqEventBusTelemetryOptions>();
         
         // configuration

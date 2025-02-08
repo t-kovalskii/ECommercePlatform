@@ -21,6 +21,7 @@
       <ProjectReference Include="..\ECommercePlatform.Services.User.Application\ECommercePlatform.Services.User.Application.csproj" />
       <ProjectReference Include="..\ECommercePlatform.Services.User.Domain\ECommercePlatform.Services.User.Domain.csproj" />
       <ProjectReference Include="..\ECommercePlatform.Services.User.Infrastructure\ECommercePlatform.Services.User.Infrastructure.csproj" />
+      <ProjectReference Include="..\ECommercePlatform.Shared.Logging\ECommercePlatform.Shared.Logging.csproj" />
     </ItemGroup>
 
 </Project>

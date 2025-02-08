@@ -2,16 +2,22 @@ using ECommercePlatform.Services.User.Application;
 using ECommercePlatform.Services.User.Infrastructure;
 using ECommercePlatform.Services.User.Web;
 using ECommercePlatform.Services.User.Web.Api;
-using ECommercePlatform.Services.User.Web.Dto;
+using ECommercePlatform.Shared.EventBus;
+using ECommercePlatform.Shared.Logging;
+using ECommercePlatform.Shared.Logging.Extensions;
 using ECommercePlatform.Shared.ServiceDefaults.Configuration;
 using ECommercePlatform.Shared.ServiceDefaults.Extensions;
-using MediatR;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddOpenApi();
 
 builder.Services.AddLogging();
+
+builder.Services.Configure<LoggerConfiguration>(builder.Configuration.GetSection(nameof(LoggerConfiguration)));
+builder.AddLogger();
+
+builder.AddMessageBus();
 
 builder.Services.Configure<ServiceConfiguration>(builder.Configuration.GetSection(nameof(ServiceConfiguration)));
 builder.AddServiceDefaults(builder.Configuration.Get<ServiceConfiguration>() ??
