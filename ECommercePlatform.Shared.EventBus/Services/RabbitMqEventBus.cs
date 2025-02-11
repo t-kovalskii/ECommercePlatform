@@ -213,6 +213,11 @@ public sealed class RabbitMqEventBus(
             SetExceptionTags(activity, ex);
         }
 
+        if (_channel != null)
+        {
+            await _channel.BasicAckAsync(eventArgs.DeliveryTag, false);
+        }
+
         return;
 
         static IEnumerable<string> ExtractFromBasicProperties(IReadOnlyBasicProperties basicProperties, string key)
