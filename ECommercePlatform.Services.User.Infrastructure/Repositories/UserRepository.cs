@@ -4,8 +4,6 @@ using ECommercePlatform.Shared.Utils.Mapper;
 
 using Microsoft.EntityFrameworkCore;
 
-using System.Linq.Expressions;
-
 namespace ECommercePlatform.Services.User.Infrastructure.Repositories;
 
 public class UserRepository(
@@ -22,7 +20,7 @@ public class UserRepository(
 
     public async Task<Domain.Models.User?> GetByIdAsync(Guid id)
     {
-        var user = await eCommerceUsersContext.Users.FirstOrDefaultAsync(u => u.Id == id);
+        var user = await eCommerceUsersContext.Users.Include(u => u.Addresses).FirstOrDefaultAsync(u => u.Id == id);
         if (user is null)
         {
             return null;
@@ -39,12 +37,19 @@ public class UserRepository(
         return newUser.Id;
     }
 
-    public Task<Domain.Models.User> UpdateAsync(Domain.Models.User entity)
+    public async Task<Domain.Models.User> UpdateAsync(Domain.Models.User entity)
     {
-        var entityToUpdate = modelMapper.Map<Entities.User>(entity);
-        eCommerceUsersContext.Users.Update(entityToUpdate);
+        var userEntity = await eCommerceUsersContext.Users.Include(u => u.Addresses)
+            .FirstOrDefaultAsync(u => u.Id == entity.Id);
         
-        return Task.FromResult(entity);
+        if (userEntity is null) 
+        {
+            throw new Exception($"User with id {entity.Id} not found");
+        }
+        
+        modelMapper.Map(entity, userEntity);
+        
+        return entity;
     }
 
     public Task<bool> DeleteAsync(Domain.Models.User user)
